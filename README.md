@@ -1,6 +1,6 @@
-## [MINA CLI](https://github.com/sevencai/mina-cli)
+# [MINA CLI](https://github.com/sevencai/mina-cli)
 
-### Usage
+## Usage
 用于快速创建微信小程序。没有很复杂的功能，只是方便最常用的功能。
 
 避免每次创建新的 demo 还需要重新新建文件。
@@ -11,8 +11,8 @@
 
 由于微信开发工具自带了压缩，编译等功能，此处不重复写此功能。
 
-*************
-### How
+
+## How
 ``` javascript
 git clone this_project
 minaapp init
@@ -27,7 +27,7 @@ minaapp create module
 支持一次性创建多个模块，使用逗号隔开即可。
 
 ****************
-### Examples
+## Examples
 ``` javascript
 npm install
 minaapp init myapp
@@ -43,7 +43,7 @@ app.json 中已注册好 user 和 log 模块。
 
 下次再新建模块，同样 `minaapp create user,log`
 ************
-### Sample image
+## Sample image
 ![](http://www.cailidan.cn/images/picinstruct.png)
 
 *****************
