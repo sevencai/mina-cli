@@ -19,20 +19,21 @@ module.exports = function () {
             fs.readJson('./lib/config.json')
                 .then((data) => {
                     if(data) {
+                        fs.showCreatePageModulesInfo('begin');
+
                         appPath = data.appPath;
                         path = data.appPath + '/pages/';
-                        fs.showCreatePageModulesInfo('begin');
 
                         return fs.readJson(appPath + '/app.json');
                     }
                 }).then((data) => {
                     let cur = data;
 
+                    // 循环写入用户输入的 page module
                     modules.forEach(item =>{
                         let mod = path + item + '/';
 
                         cur.pages.push('pages/' + item + '/' + item);
-
                         fs.outPutFile(appPath + '/app.json', JSON.stringify(cur));
 
                         fs.ensureDir(path + item).then((flag) => {

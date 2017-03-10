@@ -24,7 +24,7 @@ module.exports = function () {
                 if(flag) fs.showCreateDirInfo('begin');
             });
 
-            // 确定如果是否有目录，则开始复制
+            // 保证有用户输入的目录，并开始复制模板进入项目
             fs.ensureDir(dir)
                 .then((flag) => {
                     return flag == true

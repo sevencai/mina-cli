@@ -3,22 +3,119 @@
 1 verbose cli   'D:\\software\\Nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'publish',
 1 verbose cli   '--tag',
-1 verbose cli   '1.0.0' ]
+1 verbose cli   'a0.0.1' ]
 2 info using npm@3.10.9
 3 info using node@v6.9.2
 4 verbose publish [ '.' ]
-5 verbose stack Error: Tag name must not be a valid SemVer range: 1.0.0
-5 verbose stack     at EventEmitter.publish (D:\software\Nodejs\node_modules\npm\lib\publish.js:41:14)
-5 verbose stack     at Object.commandCache.(anonymous function) (D:\software\Nodejs\node_modules\npm\lib\npm.js:124:13)
-5 verbose stack     at EventEmitter.<anonymous> (D:\software\Nodejs\node_modules\npm\bin\npm-cli.js:73:30)
-5 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:67:7)
-5 verbose stack     at process._tickCallback (internal/process/next_tick.js:98:9)
-6 verbose cwd E:\learn\mina-cli
-7 error Windows_NT 6.1.7601
-8 error argv "D:\\software\\Nodejs\\node.exe" "D:\\software\\Nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "--tag" "1.0.0"
-9 error node v6.9.2
-10 error npm  v3.10.9
-11 error Tag name must not be a valid SemVer range: 1.0.0
-12 error If you need help, you may report this error at:
-12 error     <https://github.com/npm/npm/issues>
-13 verbose exit [ 1, true ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'E:\\learn\\mina-cli',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory D:\software\Nodejs\node_cache\mina-cli\1.0.0\package.tgz not in flight; packing
+9 verbose correctMkdir D:\software\Nodejs\node_cache correctMkdir not in flight; initializing
+10 info lifecycle mina-cli@1.0.0~prepublish: mina-cli@1.0.0
+11 silly lifecycle mina-cli@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'D:\\software\\Nodejs\\node_cache\\mina-cli\\1.0.0\\package.tgz',
+12 verbose tar pack   'E:\\learn\\mina-cli' ]
+13 verbose tarball D:\software\Nodejs\node_cache\mina-cli\1.0.0\package.tgz
+14 verbose folder E:\learn\mina-cli
+15 verbose addLocalTarball adding from inside cache D:\software\Nodejs\node_cache\mina-cli\1.0.0\package.tgz
+16 verbose correctMkdir D:\software\Nodejs\node_cache correctMkdir not in flight; initializing
+17 silly cache afterAdd mina-cli@1.0.0
+18 verbose afterAdd D:\software\Nodejs\node_cache\mina-cli\1.0.0\package\package.json not in flight; writing
+19 verbose correctMkdir D:\software\Nodejs\node_cache correctMkdir not in flight; initializing
+20 verbose afterAdd D:\software\Nodejs\node_cache\mina-cli\1.0.0\package\package.json written
+21 silly publish { name: 'mina-cli',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'cli for mina',
+21 silly publish   main: 'index.js',
+21 silly publish   bin: { minaapp: './bin/script.js' },
+21 silly publish   scripts: { test: 'node bin/script.js -i' },
+21 silly publish   keywords: [ 'cli', 'mina' ],
+21 silly publish   author: { name: 'Seven' },
+21 silly publish   license: 'MIT',
+21 silly publish   dependencies:
+21 silly publish    { bluebird: '^3.5.0',
+21 silly publish      chalk: '^1.1.3',
+21 silly publish      clear: '0.0.1',
+21 silly publish      commander: '^2.9.0',
+21 silly publish      figlet: '^1.2.0',
+21 silly publish      'fs-extra': '^2.0.0',
+21 silly publish      inquirer: '^3.0.6' },
+21 silly publish   devDependencies: { 'supports-color': '^3.2.3' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/sevencai/mina-cli.git' },
+21 silly publish   readme: '## MINA CLI (微信小程序脚手架)\r\n\r\n****************\r\n### Usage\r\n用于快速创建微信小程序。\r\n\r\n避免每次创建新的 demo 还需要重新新建文件。\r\n\r\n避免每次都输入 `mkdir x, touch x.json, touch x.js, touch x.wxml` 等。\r\n\r\n执行命令，直接生成相应的目录和文件，以及在 app.json 中注册相应的模块。\r\n\r\n由于微信开发工具自带了压缩，编译等功能，此处不重复写此功能。\r\n\r\n*************\r\n### How\r\n``` javascript\r\ngit clone this_project\r\nminaapp init\r\nminaapp create module\r\n```\r\n\r\n#### minaapp init\r\n输入 `minaapp init`, 此时 terminal 会提示输入项目名称，输入项目名称即可。\r\n\r\n#### minaapp create\r\n输入 `minaapp create yourModuleName`, 输入需要的 pages 下面的模块即可。\r\n支持一次性创建多个模块，使用逗号隔开即可。\r\n\r\n****************\r\n### Examples\r\n``` javascript\r\nnpm install\r\nminaapp init myapp\r\nminaapp create user,log\r\n```\r\n会生成一个 myapp 小程序， 并且在 pages 目录下生成 user,log 等模块。\r\n\r\nuser,log 中自动带有相应的 user.wxml, user.json 等等文件。\r\n\r\napp.json 中已注册好 user 和 log 模块。\r\n\r\n利用微信开发者工具打开创建好的 myapp 文件即可。\r\n\r\n下次再新建模块，同样 `minaapp create user,log`\r\n************\r\n### Sample image\r\n![](http://www.cailidan.cn/images/picinstruct.png)\r\n\r\n*****************\r\n###\r\n未发布到 npm.js 中。直接 clone 本项目即可。',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '538ee3f830abd51d984887d913b96715112901ab',
+21 silly publish   bugs: { url: 'https://github.com/sevencai/mina-cli/issues' },
+21 silly publish   homepage: 'https://github.com/sevencai/mina-cli#readme',
+21 silly publish   _id: 'mina-cli@1.0.0',
+21 silly publish   _shasum: 'f9eebf05a32b95b6be16103209074968e5737f7d',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name mina-cli
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'mina-cli',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'mina-cli',
+26 silly mapToRegistry   name: 'mina-cli',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/mina-cli
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading D:\software\Nodejs\node_cache\mina-cli\1.0.0\package.tgz
+30 verbose request uri https://registry.npmjs.org/mina-cli
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 20:39:39
+33 verbose request using bearer token for auth
+34 verbose request id 290f0547b5a4085c
+35 http request PUT https://registry.npmjs.org/mina-cli
+36 http 403 https://registry.npmjs.org/mina-cli
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '102',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Fri, 10 Mar 2017 12:39:40 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'close',
+37 verbose headers   'x-served-by': 'cache-nrt6132-NRT',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1489149580.087756,VS0,VE458',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating D:\software\Nodejs\node_cache\registry.npmjs.org\mina-cli on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: you do not have permission to publish "mina-cli". Are you logged in as the correct user? : mina-cli
+40 verbose stack     at makeError (D:\software\Nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (D:\software\Nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+40 verbose stack     at Request._callback (D:\software\Nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+40 verbose stack     at Request.self.callback (D:\software\Nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (D:\software\Nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (D:\software\Nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid mina-cli
+43 verbose cwd E:\learn\mina-cli
+44 error Windows_NT 6.1.7601
+45 error argv "D:\\software\\Nodejs\\node.exe" "D:\\software\\Nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "--tag" "a0.0.1"
+46 error node v6.9.2
+47 error npm  v3.10.9
+48 error code E403
+49 error you do not have permission to publish "mina-cli". Are you logged in as the correct user? : mina-cli
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

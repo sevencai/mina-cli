@@ -1,8 +1,8 @@
-## MINA CLI
+## MINA CLI (微信小程序脚手架)
 
 ****************
 ### Usage
-用于快速创建微信小程序。
+用于快速创建微信小程序。没有很复杂的功能，只是方便最常用的功能。
 
 避免每次创建新的 demo 还需要重新新建文件。
 
@@ -21,10 +21,10 @@ minaapp create module
 ```
 
 #### minaapp init
-输入 minaapp init, terminal 提示输入项目名称，输入项目名称即可。
+输入 `minaapp init`, 此时 terminal 会提示输入项目名称，输入项目名称即可。
 
 #### minaapp create
-输入 minaapp create yourModuleName, 输入需要的 pages 下面的模块即可。
+输入 `minaapp create yourModuleName`, 输入需要的 pages 下面的模块即可。
 支持一次性创建多个模块，使用逗号隔开即可。
 
 ****************
