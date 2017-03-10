@@ -1,4 +1,4 @@
-## MINA CLI (微信小程序脚手架)
+## [MINA CLI](https://github.com/sevencai/mina-cli) (微信小程序脚手架)
 
 ****************
 ### Usage
