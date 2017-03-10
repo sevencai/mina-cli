@@ -26,7 +26,7 @@ minaapp create module
 输入 `minaapp create yourModuleName`, 输入需要的 pages 下面的模块即可。
 支持一次性创建多个模块，使用逗号隔开即可。
 
-****************
+
 ## Examples
 ``` javascript
 npm install
@@ -46,7 +46,7 @@ app.json 中已注册好 user 和 log 模块。
 ## Sample image
 ![](http://www.cailidan.cn/images/picinstruct.png)
 
-*****************
-###
+
+##
 未发布到 npm.js 中。直接 clone 本项目即可。
 试用人群： 习惯用原始 微信小程序 框架的，想要简洁化开发流程的 coder.
