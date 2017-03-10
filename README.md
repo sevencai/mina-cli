@@ -14,7 +14,8 @@
 
 ## How
 ``` javascript
-git clone this_project
+git clone https://github.com/sevencai/mina-cli.git
+cd mina-cli
 minaapp init
 minaapp create module
 ```
@@ -42,11 +43,11 @@ app.json 中已注册好 user 和 log 模块。
 利用微信开发者工具打开创建好的 myapp 文件即可。
 
 下次再新建模块，同样 `minaapp create user,log`
-************
+
 ## Sample image
 ![](http://www.cailidan.cn/images/picinstruct.png)
 
 
-##
+## Remarks
 未发布到 npm.js 中。直接 clone 本项目即可。
 试用人群： 习惯用原始 微信小程序 框架的，想要简洁化开发流程的 coder.
