@@ -1,0 +1,34 @@
+{
+  "name": "mina-cli",
+  "version": "1.0.0",
+  "description": "cli for mina",
+  "main": "index.js",
+  "bin": {
+    "minaapp": "./bin/script.js"
+  },
+  "scripts": {
+    "test": "node bin/script.js -i"
+  },
+  "keywords": [
+    "cli",
+    "mina"
+  ],
+  "author": "Seven",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "chalk": "^1.1.3",
+    "clear": "0.0.1",
+    "commander": "^2.9.0",
+    "figlet": "^1.2.0",
+    "fs-extra": "^2.0.0",
+    "inquirer": "^3.0.6"
+  },
+  "devDependencies": {
+    "supports-color": "^3.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sevencai/mina-cli.git"
+  }
+}

@@ -1,0 +1,24 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\software\\Nodejs\\node.exe',
+1 verbose cli   'D:\\software\\Nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish',
+1 verbose cli   '--tag',
+1 verbose cli   '1.0.0' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 verbose publish [ '.' ]
+5 verbose stack Error: Tag name must not be a valid SemVer range: 1.0.0
+5 verbose stack     at EventEmitter.publish (D:\software\Nodejs\node_modules\npm\lib\publish.js:41:14)
+5 verbose stack     at Object.commandCache.(anonymous function) (D:\software\Nodejs\node_modules\npm\lib\npm.js:124:13)
+5 verbose stack     at EventEmitter.<anonymous> (D:\software\Nodejs\node_modules\npm\bin\npm-cli.js:73:30)
+5 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:67:7)
+5 verbose stack     at process._tickCallback (internal/process/next_tick.js:98:9)
+6 verbose cwd E:\learn\mina-cli
+7 error Windows_NT 6.1.7601
+8 error argv "D:\\software\\Nodejs\\node.exe" "D:\\software\\Nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "--tag" "1.0.0"
+9 error node v6.9.2
+10 error npm  v3.10.9
+11 error Tag name must not be a valid SemVer range: 1.0.0
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
