@@ -1,6 +1,5 @@
-## [MINA CLI](https://github.com/sevencai/mina-cli) (微信小程序脚手架)
+## [MINA CLI](https://github.com/sevencai/mina-cli)
 
-****************
 ### Usage
 用于快速创建微信小程序。没有很复杂的功能，只是方便最常用的功能。
 
@@ -50,3 +49,4 @@ app.json 中已注册好 user 和 log 模块。
 *****************
 ###
 未发布到 npm.js 中。直接 clone 本项目即可。
+试用人群： 习惯用原始 微信小程序 框架的，想要简洁化开发流程的 coder.
