@@ -40,9 +40,11 @@ user,log 中自动带有相应的 user.wxml, user.json 等等文件。
 
 app.json 中已注册好 user 和 log 模块。
 
+利用微信开发者工具打开创建好的 myapp 文件即可。
 
+下次再新建模块，同样 `minaapp create user,log`
 ************
-### 示例图片
+### Sample image
 ![](http://www.cailidan.cn/images/picinstruct.png)
 
 *****************
