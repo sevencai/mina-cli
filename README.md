@@ -11,7 +11,6 @@
 
 由于微信开发工具自带了压缩，编译等功能，此处不重复写此功能。
 
-
 ## How
 ``` javascript
 git clone https://github.com/sevencai/mina-cli.git
